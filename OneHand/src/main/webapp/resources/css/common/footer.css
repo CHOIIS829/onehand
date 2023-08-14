@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#footer{
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+}
+#footerArea{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+#logoArea{
+    width: 250px;
+    height: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+#footerContent{
+    width: 950px;
+    height: 100%;
+    font-size: 15px;
+    margin-left: 100px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
