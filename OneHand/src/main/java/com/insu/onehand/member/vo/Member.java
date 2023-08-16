@@ -19,7 +19,6 @@ public class Member {
 	private String memberPwd;
 	private String memberName;
 	private String email;
-	private Date birthDate;
 	private String gender;
 	private Date createDate;
 	private String status;

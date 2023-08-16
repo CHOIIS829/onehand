@@ -6,8 +6,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+	location.href = 'main';
+</script>
 <body>
-	여긴 index.jsp
-	<jsp:forward page="WEB-INF/views/main.jsp"/>
 </body>
 </html>
