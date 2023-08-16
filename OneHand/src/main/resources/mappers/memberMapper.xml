@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
 <mapper namespace="com.insu.onehand.member.mapper.MemberMapper">
+
+	<insert id="insertMember" parameterType="com.insu.onehand.member.vo.Member">
+		INSERT INTO MEMBER(MEMBER_ID, MEMBER_PWD, MEMBER_NAME, EMAIL, GENDER)
+		VALUES(#{memberId}, #{memberPwd}, #{memberName}, #{email}, #{gender})
+	</insert>
 	
 </mapper>

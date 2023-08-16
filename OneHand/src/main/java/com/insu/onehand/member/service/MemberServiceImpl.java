@@ -1,5 +1,21 @@
 package com.insu.onehand.member.service;
 
-public class MemberServiceImpl {
+import org.springframework.stereotype.Service;
+
+import com.insu.onehand.member.mapper.MemberMapper;
+import com.insu.onehand.member.vo.Member;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberServiceImpl implements MemberService {
+	
+	private final MemberMapper memberMapper;
+
+	@Override
+	public int insertMember(Member m) {
+		return memberMapper.insertMember(m);
+	}
 
 }
