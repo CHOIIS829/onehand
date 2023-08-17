@@ -1,20 +1,30 @@
-#inrollForm{
-    width: 500px;
+#enrollForm{
+    width: 550px;
     height: 100%;
     margin: 0 auto;
 }
-#inrollForm>div{
+#enrollForm>div{
     width: 100%;
     height: 100%;
-    padding-top: 100px;
+    padding-top: 130px;
+    margin-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     line-height: 50px;
 }
-#inrollForm>form{padding-bottom: 100px;}
+#enrollForm>form>table>tbody>tr>td:nth-child(2){
+    width: 380px;
+}
+#enrollForm>form>table>tbody>tr>td:nth-child(1){
+    width: 150px;
+}
+#enrollForm>form{padding-bottom: 150px;}
 form table{margin: auto;}
-form input{margin: 10px;}
+form input{
+    margin: 10px;
+    width: 100%;
+}
 form button{margin: 10px;}
 table button{
     width: 100px;

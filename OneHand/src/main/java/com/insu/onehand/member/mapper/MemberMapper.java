@@ -8,5 +8,7 @@ import com.insu.onehand.member.vo.Member;
 public interface MemberMapper {
 	
 	int insertMember(Member m);
+	int checkId(String memberId);
+	Member memberLogin(Member m);
 
 }

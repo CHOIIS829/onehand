@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
 <mapper namespace="com.insu.onehand.member.mapper.MemberMapper">
-
+	<!-- 회원가입 -->
 	<insert id="insertMember" parameterType="com.insu.onehand.member.vo.Member">
 		INSERT INTO MEMBER(MEMBER_ID, MEMBER_PWD, MEMBER_NAME, EMAIL, GENDER)
 		VALUES(#{memberId}, #{memberPwd}, #{memberName}, #{email}, #{gender})
 	</insert>
+	<!-- 아이디 중복체크 -->
+	<select id="checkId" parameterType="java.lang.String" resultType="java.lang.Integer">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE MEMBER_ID = #{memberId}
+	</select>
+	<!-- 로그인 -->
+	<select id="memberLogin" parameterType="com.insu.onehand.member.vo.Member" resultType="com.insu.onehand.member.vo.Member">
+		SELECT *
+		FROM MEMBER
+		WHERE MEMBER_ID = #{memberId}
+		AND STATUS = 'Y'
+	</select>
 	
 </mapper>

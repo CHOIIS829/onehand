@@ -8,21 +8,20 @@
 
 <jsp:include page="/WEB-INF/views/commons/common.jsp"/>
 <link rel="stylesheet" href="resources/css/member/enrollForm.css">
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="resources/js/member/enrollForm.js"></script>
 
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/commons/header.jsp"/>
 
     <div id="container">
-        <div id="inrollForm">
-            <div>회원가입</div>
+        <div id="enrollForm">
+            <div id="title">회원가입</div>
             <form action="insert.me" method="post">
                 <table>
                     <tr>
                         <td>* 아이디</td>
                         <td><input type="text" name="memberId" required></td>
-                        <td><button type="button">중복확인</button></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -52,15 +51,15 @@
                         <td>성별</td>
                         <td>
                             <div>
-                                <input type="radio" name="gender" value="M"><label for="men">남</label> 
-                                <input type="radio" name="gender" value="F"><label for="women">여</label>
+                                <input type="radio" name="gender" value="M" style="width: 15px;"><label for="men">남</label> 
+                                <input type="radio" name="gender" value="F" style="width: 15px;"><label for="women">여</label>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2" id="btnArea">
-                            <button type="submit">회원가입</button>
-                            <button type="button">취소</button>
+                            <button type="submit" disabled>회원가입</button>
+                            <button type="button" onclick="location.href='main'">취소</button>
                         </td>
                     </tr>
                 </table>

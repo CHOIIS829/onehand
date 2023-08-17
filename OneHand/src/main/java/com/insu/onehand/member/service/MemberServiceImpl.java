@@ -18,4 +18,14 @@ public class MemberServiceImpl implements MemberService {
 		return memberMapper.insertMember(m);
 	}
 
+	@Override
+	public int checkId(String memberId) {
+		return memberMapper.checkId(memberId);
+	}
+
+	@Override
+	public Member memberLogin(Member m) {
+		return memberMapper.memberLogin(m);
+	}
+
 }

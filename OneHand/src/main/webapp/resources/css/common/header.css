@@ -53,16 +53,16 @@ header{
 #login span{
     margin-left: 20px;
     font-weight: bold;
+}
+.div1, .div2{
     cursor: pointer;
 }
 #menu span:hover{
     color: orange;
 }
-#login span:hover{
+.div1:hover, .div2:hover{
     color: orange;
 }
-
-
 #container{
     width: 1200px;
     margin: 0 auto;
