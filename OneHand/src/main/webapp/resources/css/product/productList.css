@@ -1,0 +1,100 @@
+.product{
+    width: 250px;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+}
+.product>div{
+    margin-bottom: 10px;
+}
+.productPic img{
+    width: 100%;
+    height: 200px;
+}
+.productInfo{
+    display: flex;
+    justify-content: space-between;
+}
+#productList{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.product:hover{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+#area1{
+    width: 100%;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#search{
+    display: flex;
+    justify-content: center;
+}
+#category{
+    display: flex;
+    justify-content: end;
+}
+#insertBtn>button{
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#category select{
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+#area1>div{
+    width: 400px;
+}
+#search button{
+    width: 70px;
+    border: none;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#search input{
+    width: 300px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+#pagingBar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pagingBar li{
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+#pagingBar a{
+    text-decoration: none;
+    color: black;
+}
+#pagingBar a:hover{
+    cursor: pointer;
+    color: orange;
+}

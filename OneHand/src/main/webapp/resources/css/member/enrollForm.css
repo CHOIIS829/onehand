@@ -19,7 +19,7 @@
 #enrollForm>form>table>tbody>tr>td:nth-child(1){
     width: 150px;
 }
-#enrollForm>form{padding-bottom: 150px;}
+#enrollForm>form{padding-bottom: 275px;}
 form table{margin: auto;}
 form input{
     margin: 10px;

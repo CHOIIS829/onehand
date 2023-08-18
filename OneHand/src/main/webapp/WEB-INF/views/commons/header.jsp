@@ -9,7 +9,7 @@
                 <div>한손의 거래</div>
             </div>
             <div id="menu">
-                <span onclick="location.href='List.pro'">중고장터</span>
+                <span onclick="location.href='list.pro'">중고장터</span>
                 <span onclick="location.href='list.bo'">커뮤니티</span>
             </div>
             <div id="login">
@@ -20,8 +20,8 @@
             		</c:when>
             		<c:otherwise>
 	            		<span>${ loginUser.memberName }님</span>
-		                <span class="div1 material-symbols-outlined" onclick="location.href='myPage.me'">person</span>
-		                <span class="div2 material-symbols-outlined" onclick="location.href='memberLogout'">logout</span>
+		                <span class="div1" onclick="location.href='myPage.me'"><i class="xi-user xi-2x"></i></span>
+		                <span class="div2" onclick="location.href='memberLogout'"><i class="xi-log-out  xi-2x"></i></span>
             		</c:otherwise>
             	</c:choose>
             </div>

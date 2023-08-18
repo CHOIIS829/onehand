@@ -1,4 +1,4 @@
-package com.insu.onehand.member.vo;
+package com.insu.onehand.product.vo;
 
 import java.sql.Date;
 
@@ -8,20 +8,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
 @Setter
+@Getter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Member {
+public class ProductAtta {
 	
-	private String memberId;
-	private String memberPwd;
-	private String memberName;
-	private String email;
-	private String gender;
-	private Date createDate;
-	private String status;
+	private int attaNo;
+	private int productNo;
 	private String changeName;
+	private int fileLevel;
 	
 }
