@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,11 @@
 
     <div id="container">
 	    <div id="area1">
-			<div id="insertBtn"><button onclick="location.href='insertForm.pro'">글작성</button></div>
+			<div id="insertBtn">
+				<c:if test="${ not empty loginUser }">
+					<button onclick="location.href='insertForm.pro'">글작성</button>
+				</c:if>
+			</div>
 			<div id="search">
 				<div><input type="text"></div>
 				<div><button>검색</button></div>

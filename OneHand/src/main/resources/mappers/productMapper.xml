@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
 <mapper namespace="com.insu.onehand.product.mapper.ProductMapper">
 
+	<insert id="insertProduct" parameterType="com.insu.onehand.product.vo.Product">
+		INSERT INTO PRODUCT(PRODUCT_NO, PRODUCT_NAME, PRODUCT_CONTENT, PRICE, MEMBER_ID, CATEGORY_NO, AREA_ID)
+		VALUES(SEQ_PRODUCT.NEXTVAL, #{productName}, #{productContent}, #{price}, #{memberId}, #{categoryNo}, #{areaId})
+	</insert>
 	
+	<insert id="insertProductAtta" parameterType="com.insu.onehand.product.vo.ProductAtta">
+		INSERT INTO PRODUCT_ATTA(ATTA_NO, PRODUCT_NO, CHANGE_NAME, FILE_LEVEL)
+		VALUES(SEQ_PRODUCT_ATTA.NEXTVAL, SEQ_PRODUCT.CURRVAL, #{changeName}, #{fileLevel})
+	</insert>
 
 </mapper>

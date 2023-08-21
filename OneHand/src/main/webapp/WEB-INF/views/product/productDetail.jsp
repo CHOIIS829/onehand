@@ -24,6 +24,13 @@
 					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
 					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
 					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
 				</div>
 					<!-- 페이징 필요시 추가 -->
 					<div class="swiper-pagination"></div>
@@ -34,6 +41,7 @@
 			<div id="area2">
 				<div id="area2-1">
 					<div>컵 팔아요~~~</div>
+					<div>2021-09-09</div>
 				</div>
 				<div id="area2-2">
 					<div>지역: 경기도</div> 
@@ -52,7 +60,9 @@
 						<!-- <i class="xi-heart xi-2x"></i> -->
 					</div>
 					<div><span>10000</span>원</div>
-					<div><button>채팅하기</button></div>
+				</div>
+				<div id="area2-5">
+					<button>채팅하기</button>
 				</div>
 			</div>
 		</div>
