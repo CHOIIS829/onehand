@@ -30,6 +30,9 @@
 					<if test="areaId != 0">
 						AND AREA_ID = #{areaId}
 					</if>
+					<if test="keyword != 'none'">
+						AND PRODUCT_NAME LIKE '%' || #{keyword} || '%'
+					</if>
 					<choose>
 						<when test="sortOption == 'latest'">
 							ORDER BY CREATE_DATE DESC

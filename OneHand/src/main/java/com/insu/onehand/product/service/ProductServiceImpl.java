@@ -36,8 +36,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ArrayList<Product> selectList(int areaId, int categoryNo, String sortOption, PageInfo pi) {
-		return productMapper.selectList(areaId, categoryNo, sortOption, pi);
+	public ArrayList<Product> selectList(int areaId, int categoryNo, String sortOption, String keyword, PageInfo pi) {
+		return productMapper.selectList(areaId, categoryNo, sortOption, keyword, pi);
 	}
 
 	@Override

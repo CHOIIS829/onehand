@@ -42,7 +42,8 @@ public class ProductController {
 	public String ajaxSelectList(@RequestParam(value="areaId", defaultValue="0") int areaId, 
 							@RequestParam(value="categoryNo", defaultValue="0")int categoryNo,
 							@RequestParam(value="sortOption", defaultValue="latest") String sortOption,
-							@RequestParam(value="cPage", defaultValue="1") int currentPage) {
+							@RequestParam(value="cPage", defaultValue="1") int currentPage,
+							@RequestParam(value="keyword", defaultValue="none") String keyword) {
 		
 		//페이징
 		int listCount = productService.selectListCount();
@@ -51,7 +52,7 @@ public class ProductController {
 		
 		PageInfo pi = Pagination.getPageInfo(listCount, currentPage, pageLimit, boardLimit);
 		
-		ArrayList<Product> list = productService.selectList(areaId, categoryNo, sortOption, pi);
+		ArrayList<Product> list = productService.selectList(areaId, categoryNo, sortOption, keyword, pi);
 		
 		Map<String, Object> dataMap = new HashMap<>();
 		dataMap.put("list", list);

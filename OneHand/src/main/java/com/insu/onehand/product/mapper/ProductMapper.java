@@ -18,6 +18,7 @@ public interface ProductMapper {
 	ArrayList<Product> selectList(@Param("areaId") int areaId,
 								  @Param("categoryNo") int categoryNo, 
 								  @Param("sortOption") String sortOption, 
+								  @Param("keyword") String keyword,
 								  @Param("pi") PageInfo pi);
 	Product selectProduct(int productNo);
 	ArrayList<ProductAtta> selectAtta(int productNo);

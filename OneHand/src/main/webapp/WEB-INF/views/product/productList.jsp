@@ -23,12 +23,12 @@
 				</c:if>
 			</div>
 			<div id="search">
-				<div><input type="text"></div>
-				<div><button>검색</button></div>
+				<div><input type="text" id="keyword"></div>
+				<div><button type="button" id="searchBtn">검색</button></div>
 			</div>
 			<div id="categoryArea">
 				<div>
-					<select name="areaId" id="area" onchange="changeList();">
+					<select name="areaId" id="area">
 						<option value="0">전체</option>
 						<option value="1">서울</option>
 						<option value="2">부산</option>
@@ -50,7 +50,7 @@
 					</select>
 				</div>
 				<div>
-					<select name="categoryNo" id="category" onchange="changeList();">
+					<select name="categoryNo" id="category">
 						<option value="0">전체</option>
 						<option value="1">디지털</option>
 						<option value="2">가구</option>
@@ -61,7 +61,7 @@
 					</select>
 				</div>
 				<div>
-					<select name="sortOption" id="sortOption" onchange="changeList();">
+					<select name="sortOption" id="sortOption">
 						<option value="latest">최신순</option>
 						<option value="popular">인기순</option>
 						<option value="highPrice">가격높은순</option>

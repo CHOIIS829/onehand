@@ -10,7 +10,7 @@ public interface ProductService {
 	
 	int inserProduct(Product p, ArrayList<ProductAtta> list);
 	int selectListCount();
-	ArrayList<Product> selectList(int areaId, int categoryNo, String sortOption, PageInfo pi);
+	ArrayList<Product> selectList(int areaId, int categoryNo, String sortOption, String keyword, PageInfo pi);
 	Product selectProduct(int productNo);
 	ArrayList<ProductAtta> selectAtta(int productNo);
 	int updateCount(int productNo);
