@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,16 +22,9 @@
 		<div>
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
-					<div class="swiper-slide"><img src="resources/images/1.jpg" alt=""></div>
+					<c:forEach var="at" items="${ list }">
+						<div class="swiper-slide"><img src="resources/upFiles/${ at.changeName }" alt=""></div>
+					</c:forEach>
 				</div>
 					<!-- 페이징 필요시 추가 -->
 					<div class="swiper-pagination"></div>
@@ -40,26 +34,24 @@
 			</div>
 			<div id="area2">
 				<div id="area2-1">
-					<div>컵 팔아요~~~</div>
-					<div>2021-09-09</div>
+					<div>${ p.productName }</div>
+					<div>${ p.createDate }</div>
 				</div>
 				<div id="area2-2">
-					<div>지역: 경기도</div> 
-					<div>판매자: admin</div>
+					<div>지역: ${ p.areaName }</div> 
+					<div>판매자: ${ p.memberId }</div>
 				</div>
 				<div id="area2-3">
 <pre>
-한번도 안쓴 컵 팔아요~~ 
-하자 없고 깨끗합니다~~
-저렴하게 가져가서 잘 쓰실 분 연락주세요
+${ p.productContent }
 </pre>
 				</div>
 				<div id="area2-4">
 					<div>
-						<i class="xi-heart-o xi-2x">32</i>
+						<i class="xi-heart-o xi-2x">${ p.count }</i>
 						<!-- <i class="xi-heart xi-2x"></i> -->
 					</div>
-					<div><span>10000</span>원</div>
+					<div><span>${ p.price }</span>원</div>
 				</div>
 				<div id="area2-5">
 					<button>채팅하기</button>

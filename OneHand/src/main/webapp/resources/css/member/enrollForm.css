@@ -6,7 +6,7 @@
 #enrollForm>div{
     width: 100%;
     height: 100%;
-    padding-top: 130px;
+    padding-top: 100px;
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: bold;
@@ -19,7 +19,7 @@
 #enrollForm>form>table>tbody>tr>td:nth-child(1){
     width: 150px;
 }
-#enrollForm>form{padding-bottom: 275px;}
+#enrollForm>form{padding-bottom: 175px;}
 form table{margin: auto;}
 form input{
     margin: 10px;

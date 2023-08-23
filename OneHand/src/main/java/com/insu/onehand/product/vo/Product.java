@@ -25,5 +25,10 @@ public class Product {
 	private String memberId2;
 	private int categoryNo;
 	private int areaId;
+	private String changeName;
+	private String memberName;
+	private String memberName2;
+	private String categoryName;
+	private String areaName;
 
 }

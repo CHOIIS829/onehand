@@ -3,13 +3,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
     
     <header>
+
+        <c:if test="${ not empty alertMsg}">
+            <script>
+                alert("${ alertMsg }");
+            </script>
+            <c:remove var="alertMsg" scope="session"/>
+        </c:if>
+
         <div id="header">
             <div id="logo" onclick="location.href='main'">
                 <img src="resources/images/cart.png" alt="">
                 <div>한손의 거래</div>
             </div>
             <div id="menu">
-                <span onclick="location.href='list.pro'">중고장터</span>
+                <span onclick="location.href='productList'">중고장터</span>
                 <span onclick="location.href='list.bo'">커뮤니티</span>
             </div>
             <div id="login">

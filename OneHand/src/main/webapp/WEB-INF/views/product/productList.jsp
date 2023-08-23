@@ -9,7 +9,7 @@
 
 <jsp:include page="/WEB-INF/views/commons/common.jsp"/>
 <link rel="stylesheet" href="resources/css/product/productList.css">
-<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="resources/js/product/productList.js"></script>
 
 </head>
 <body>
@@ -26,9 +26,9 @@
 				<div><input type="text"></div>
 				<div><button>검색</button></div>
 			</div>
-			<div id="category">
+			<div id="categoryArea">
 				<div>
-					<select name="area" id="">
+					<select name="areaId" id="area" onchange="changeList();">
 						<option value="0">전체</option>
 						<option value="1">서울</option>
 						<option value="2">부산</option>
@@ -50,183 +50,36 @@
 					</select>
 				</div>
 				<div>
-					<select name="category" id="">
+					<select name="categoryNo" id="category" onchange="changeList();">
 						<option value="0">전체</option>
 						<option value="1">디지털</option>
 						<option value="2">가구</option>
 						<option value="3">의류</option>
 						<option value="4">도서</option>
 						<option value="5">스포츠/레저</option>
-						<option value="6">취미</option>
-						<option value="7">기타</option>
+						<option value="6">기타</option>
 					</select>
 				</div>
 				<div>
-					<select name="" id="">
-						<option value="">최신순</option>
-						<option value="">인기순</option>
-						<option value="">가격높은순</option>
-						<option value="">가격낮은순</option>
+					<select name="sortOption" id="sortOption" onchange="changeList();">
+						<option value="latest">최신순</option>
+						<option value="popular">인기순</option>
+						<option value="highPrice">가격높은순</option>
+						<option value="lowPrice">가격낮은순</option>
 					</select>
 				</div>
 			</div>
 	    </div>
 	    <div id="productList">
-	        <div class="product" onclick="location.href='detail.pro'">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
-	        <div class="product">
-	            <div class="productPic"><img src="resources/images/1.jpg" alt=""></div>
-	            <div class="productName">물건 이름</div>
-	            <div class="productInfo">
-	                <div class="price">가격</div>
-	                <div class="productDate">등록일</div>
-	            </div>
-	        </div>
+			
 	    </div>
+		<div id="noArea">
+
+		</div>
 		<div id="pagingBar">
 			<nav>
-				<ul>
-					<li>
-						<a href="#">
-							<span>&laquo;</span>
-						</a>
-					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li><a href="#">7</a></li>
-					<li><a href="#">8</a></li>
-					<li><a href="#">9</a></li>
-					<li>
-						<a href="#">
-							<span>&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			  </nav>
 
+			</nav>
 		</div>
     </div>
 	
